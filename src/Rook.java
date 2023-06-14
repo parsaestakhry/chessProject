@@ -66,4 +66,9 @@ class Rook extends Piece {
         }
     }
 
+    @Override
+    public void capture(Board board, Board another, Block start, Block end) {
+
+    }
+
 }

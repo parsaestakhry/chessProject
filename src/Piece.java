@@ -40,6 +40,7 @@ public abstract class Piece {
 
     public abstract boolean canMove(Board board, Block start, Block end);
     public abstract void move(Board board, Block start, Block end);
+    public abstract void capture(Board board, Board another, Block start, Block end);
 
 
 }

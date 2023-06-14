@@ -38,6 +38,9 @@ public class Pawn extends Piece{
                 return pieceAtEnd != null && pieceAtEnd.isWhite() != isWhite();
             }
 
+            // checking if pawn is moving 2 squares for the first time
+
+
             // Invalid move if none of the conditions are met
             return false;
 
@@ -53,6 +56,11 @@ public class Pawn extends Piece{
             // emptying the place that the piece has been
             start.setPiece(null);
         }
+    }
+
+    @Override
+    public void capture(Board board, Board another, Block start, Block end) {
+
     }
 
 
