@@ -19,6 +19,8 @@ public class Board {
         return block.getPiece();
     }
 
+
+
     public void resetBoard() {
         // initializing the white pieces : bottom row
         squares[0][0] = new Block(0 , 0 , new Rook(true));

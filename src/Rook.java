@@ -67,8 +67,17 @@ class Rook extends Piece {
     }
 
     @Override
-    public void capture(Board board, Board another, Block start, Block end) {
-
+    public void capture(Board board, Block start, Block end) {
+        if (canMove(board, start, end)){
+            // indicating that the pawn has moved
+            setHasMoved(true);
+            Piece capturedPiece = end.getPiece();
+            capturedPiece.setKilled(true);
+            // setting the piece in the destination
+            end.setPiece(this);
+            // emptying the place that the piece has been
+            start.setPiece(null);
+        }
     }
 
 }

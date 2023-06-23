@@ -59,7 +59,15 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public void capture(Board board, Board another, Block start, Block end) {
+    public void capture(Board board, Block start, Block end) {
+
+            if (canMove(board, start , end)){
+                setHasMoved(true);
+                Piece capturedPiece = end.getPiece();
+                capturedPiece.setKilled(true);
+                end.setPiece(this);
+                start.setPiece(null);
+            }
 
     }
 
