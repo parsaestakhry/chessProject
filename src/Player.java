@@ -10,5 +10,6 @@ public abstract class Player {
     {
         return this.humanPlayer;
     }
+    public abstract String playerColor();
 }
 

@@ -4,4 +4,14 @@ public class ComputerPlayer extends Player {
         this.whiteSide = whiteSide;
         this.humanPlayer = false;
     }
+
+    @Override
+    public String playerColor() {
+        if (this.whiteSide){
+            return "white";
+        }
+        else {
+            return "black";
+        }
+    }
 }

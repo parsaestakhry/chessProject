@@ -61,6 +61,11 @@ class King extends Piece {
         }
     }
 
+    @Override
+    public String getName() {
+        return "K";
+    }
+
     public boolean isChecked(Board board, Block kingBlock){
         int kingX = kingBlock.getX();
         int kingY = kingBlock.getY();

@@ -80,4 +80,9 @@ class Queen extends Piece {
             start.setPiece(null);
         }
     }
+
+    @Override
+    public String getName() {
+        return "Q";
+    }
 }

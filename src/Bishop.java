@@ -67,4 +67,9 @@ class Bishop extends Piece {
             start.setPiece(null);
         }
     }
+
+    @Override
+    public String getName() {
+        return "B";
+    }
 }

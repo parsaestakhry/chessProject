@@ -10,7 +10,6 @@ class Rook extends Piece {
         int startY = start.getY();
         int endX  = end.getX();
         int endY = end.getY();
-
         // checking if the movement is in the boundaries of the board
         if (!board.isInBoard(endX, endY)){
             return false;
@@ -54,6 +53,8 @@ class Rook extends Piece {
 
     }
 
+
+
     @Override
     public void move(Board board, Block start, Block end) {
         if (canMove(board, start, end)){
@@ -79,5 +80,10 @@ class Rook extends Piece {
             start.setPiece(null);
         }
     }
+    @Override
+    public String getName(){
+        return "R";
+    }
+
 
 }

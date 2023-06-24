@@ -4,7 +4,9 @@ public class HumanPlayer extends Player {
         this.whiteSide = whiteSide;
         this.humanPlayer = true;
     }
-    public String playerColor (boolean whiteSide){
+
+    @Override
+    public String playerColor() {
         if (this.whiteSide){
             return "white";
         }

@@ -71,5 +71,10 @@ public class Pawn extends Piece{
 
     }
 
+    @Override
+    public String getName() {
+        return "P";
+    }
+
 
 }

@@ -51,4 +51,9 @@ class Knight extends Piece {
             start.setPiece(null);
         }
     }
+
+    @Override
+    public String getName() {
+        return "K";
+    }
 }

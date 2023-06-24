@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class Board {
-    Block[][] squares;
+    Block[][] squares = new Block[8][8];
 
     // constructors
 
@@ -8,7 +10,10 @@ public class Board {
 
     // getters and setters
     public Boolean isInBoard(int x, int y) {
-        return  (x > 7 || x < 0 || y > 7 || y < 0);
+        if (x > 7 || x < 0 || y > 7 || y < 0){
+            return false;
+        }
+        return true;
     }
 
     public Block getBlock(int x, int y){
@@ -18,6 +23,7 @@ public class Board {
     public Piece getPieceAt(Block block){
         return block.getPiece();
     }
+    ArrayList pieces = new ArrayList<>();
 
 
 
@@ -32,14 +38,6 @@ public class Board {
         squares[0][6] = new Block(0 , 1 , new Knight(true));
         squares[0][5] = new Block(0 , 2 , new Bishop(true));
         // initializing the white pawns
-//        squares[1][0] = new Block(1 , 0, new Pawn(true));
-//        squares[1][1] = new Block(1 , 0, new Pawn(true));
-//        squares[1][2] = new Block(1 , 0, new Pawn(true));
-//        squares[1][3] = new Block(1 , 0, new Pawn(true));
-//        squares[1][4] = new Block(1 , 0, new Pawn(true));
-//        squares[1][5] = new Block(1 , 0, new Pawn(true));
-//        squares[1][6] = new Block(1 , 0, new Pawn(true));
-//        squares[1][7] = new Block(1 , 0, new Pawn(true));
         for (int w = 0 ;w < squares[1].length; w ++){
             squares[1][w] = new Block(1 , w , new Pawn(true));
         }
