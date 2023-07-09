@@ -23,13 +23,13 @@ public class Board {
     public Piece getPieceAt(Block block){
         return block.getPiece();
     }
-    ArrayList pieces = new ArrayList<>();
+    ArrayList<Piece> pieces = new ArrayList<>();
 
 
 
     public void resetBoard() {
         // initializing the white pieces : bottom row
-        squares[0][0] = new Block(0 , 0 , new Rook(true));
+        squares[0][0] = new Block(0 , 1, new Rook(true));
         squares[0][1] = new Block(0 , 1 , new Knight(true));
         squares[0][2] = new Block(0 , 2 , new Bishop(true));
         squares[0][3] = new Block(0 , 3 , new Queen(true));
@@ -63,12 +63,10 @@ public class Board {
                 squares[i][j] = new Block(i , j , null);
             }
         }
-
-
-
     }
 
-
-
-
+    public String updateBoard() {
+        return squares[0][0].getPiece().getName();
+    }
 }
+

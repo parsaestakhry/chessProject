@@ -68,7 +68,6 @@ public class Pawn extends Piece{
                 end.setPiece(this);
                 start.setPiece(null);
             }
-
     }
 
     @Override
